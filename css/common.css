@@ -9,7 +9,7 @@
     position: relative;
     box-sizing: border-box;
     position: relative;
-    height: 90px;
+   
 }
 /* .nav-bg{
     position: absolute;
@@ -62,7 +62,12 @@
 .gnb > li > ul{
     display: none;
 }
-
+.util .all-menu i{
+    font-size: 32px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .bg{
     display: none;
 }
