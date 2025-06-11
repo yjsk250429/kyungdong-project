@@ -40,7 +40,7 @@
     justify-content: center;
 }
 #mainVisual .mainBanner li h2{
-    font-size: 36px;
+    font-size: 40px;
     color: #fff;
 }
 #mainVisual .mainBanner li h2 span{
@@ -50,8 +50,22 @@
     color: #fff;
 }
 #mainVisual .mainBanner li h2 +p span{}
-#mainVisual .mainBanner li .more{}
-#mainVisual .mainBanner li .more a{}
+#mainVisual .mainBanner li .more{
+    margin-top: 50px;
+}
+#mainVisual .mainBanner li .more a{
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    line-height: 50px;
+    font-size: 15px;
+    border: 1px solid #fff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+}
 
 #mainVisual .btn{
     position: absolute;
@@ -79,17 +93,14 @@
     font-size: 43px;
 }
 
-.main .con1 .inner,
-.main .con2 .inner{
+.main .content1 .inner{
     padding: 120px 0;
 }
-.main .con1 .more,
-.main .con2 .more{
+.main .content1 .more{
     text-align: center;
 }
 
-.main .con1 .more a,
-.main .con2 .more a{
+.main .content1 .more a{
     display: inline-block;
     width: 180px;
     height: 50px;
@@ -100,12 +111,12 @@
     position: relative;
     overflow: hidden;
 }
-.main .con1 .more a:hover,
-.main .con2 .more a:hover{
+
+.main .content1 .more a:hover{
     border-color: orange;
 }
-.main .con1 .more a::before,
-.main .con2 .more a::before{
+
+.main .content1 .more a::before{
     content: "";
     display: block;
     width: 220px;
@@ -118,25 +129,23 @@
     transform: skewX(-30deg);
     z-index: 10;
 }
-.main .con1 .more a:hover::before,
-.main .con2 .more a:hover::before{
+
+.main .content1 .more a:hover::before{
     left: -10px;
 }
-.main .con1 .more a span,
-.main .con2 .more a span{
+
+.main .content1 .more a span{
     position: relative;
     z-index: 20;
 }
-.main .con1 .more a:hover span,
-.main .con2 .more a:hover span{
+.main .content1 .more a:hover span{
     color: #fff;
 }
 
-.main .con3 .more,
-.main .con4 .more{}
-
-.main .con3 .more a,
-.main .con4 .more a{
+.main .content2 .more{
+    /* text-align: center; */
+}
+.main .content2 .more a{
     display: inline-block;
     width: 180px;
     height: 50px;
@@ -146,14 +155,16 @@
     border: 1px solid #fff;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
-.main .con3 .more a::before,
-.main .con4 .more a::before{
+
+.main .content2 .more a::before{
     content: "";
     display: block;
     width: 220px;
     height: 70px;
+    background: #fff;
     position: absolute;
     left: -230px;
     top: -10px;
@@ -162,19 +173,27 @@
     z-index: 10;
 }
 
-.main .con3 .more a:hover::before,
-.main .con4 .more a:hover::before{
+.main .content2 .more a:hover::before{
     left: -10px;
 }
-.main .con3 .more a:hover span,
-.main .con4 .more a:hover span{
-    color: transparent;
+
+.main .content2 .more a span{
+    position: relative;
+    z-index: 20;
+    color:#fff;
+}
+
+.main .content2 .more a:hover span{
+    color: #000;
 }
 
 .main .con1 {}
 .main .con1 h2{
     text-align: center;
     margin-bottom: 6px;
+}
+.main .con1 h2::after{
+    
 }
 .main .con1 h2 + p{
     text-align: center;
@@ -290,7 +309,7 @@
 .main .con3::after{
     content: '';
     display: block;
-    width: 40%;
+    width: 43.6%;
     height: 100%;
     background: #07255d;
     position: absolute;
@@ -298,22 +317,200 @@
     top: 0;
     z-index: -10;
 }
-.main .con3 .inner{}
+.main .con3 .inner{
+    width: 1160px;
+    height: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .main .con3 .inner .public{
     color: #fff;
+    width: 450px;
 }
-.main .con3 .inner .public strong{}
-.main .con3 .inner .public h2{}
-.main .con3 .inner .public > p{}
+.main .con3 .inner .public strong{
+    font-size: 25px;
+    font-weight: 300;
+}
+.main .con3 .inner .public h2{
+    margin-bottom: 30px;
+}
+.main .con3 .inner .public h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 1px;
+    background: #fff;
+    margin-top: 10px;
+}
+.main .con3 .inner .public h2 + p{
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    width: 375px;
+    word-break: keep-all;
+}
 .main .con3 .inner ul{
     display: flex;
     flex-wrap: wrap;
     width: 600px;
+    gap:40px ;
 }
 .main .con3 .inner ul li{
     width: 275px;
 }
-.main .con3 .inner ul li a div{}
-.main .con3 .inner ul li a div img{
+.main .con3 .inner ul li a div{
     width: 275px;
+    height: 180px;
+    overflow: hidden;
+}
+.main .con3 .inner ul li a div img{
+    width: 100%;
+    height: 180px;
+    transition: 0.5s;
+}
+.main .con3 .inner ul li a:hover div img{
+    transform: scale(1.1);
+}
+.main .con3 .inner ul li strong{
+    display: block;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.main .con4{
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(../images/main_foot_bg.jpg);
+}
+.main .con4 .inner{
+    width: 1160px;
+    height: 480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .con4 .inner .about{
+    color: #fff;
+}
+.main .con4 .inner .about h2{
+    font-size: 43px;
+    margin-bottom: 10px;
+}
+.main .con4 .inner .about h2 span{
+    font-weight: 200;
+}
+.main .con4 .inner .about h2+p{
+    margin-bottom: 40px;
+}
+
+.main .con4 .inner ul{
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+.main .con4 .inner ul li{}
+.main .con4 .inner ul li a{
+    display: block;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 300;
+}
+.main .con4 .inner ul li:nth-child(1) a{
+    background: rgba(244, 104, 17, 0.70);
+}
+.main .con4 .inner ul li:nth-child(2) a{
+    background: rgba(12, 21, 47, 0.70);
+}
+.main .con4 .inner ul li:nth-child(3) a{
+    background: rgba(7, 37, 93, 0.70);
+
+}
+.main .con4 .inner ul li a span{
+    display: block;
+    width: 55px;
+    height: 50px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.main .con4 .inner ul li a strong{
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+.main .con4 .inner ul li a em{
+    font-size: 15px;
+    opacity: 0.8;
+}
+.menu{
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menu ul{
+    position: relative;
+}
+.menu ul::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90%;
+    background: #000;
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+.menu ul li{
+    margin-bottom: 20px;
+    position: relative;
+}
+.menu ul li::before{
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu ul li::after{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.menu ul li.on::after{
+    display: block;
+}
+.menu ul li:last-child{
+    margin-bottom: 0;
+}
+.menu ul li a{
+    display: block;
+    padding-left: 20px;
+    color: #000;
+    opacity: 0.2;
+}
+.main ul li.on a{
+    color: #000;
+    opacity: 1;
 }
