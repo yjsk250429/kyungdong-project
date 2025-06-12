@@ -75,6 +75,7 @@
     height: 70px;
     border: 1px solid #fff;
     background: transparent;
+    z-index: 50;
 }
 #mainVisual .btn i{
     color:#fff;
@@ -453,6 +454,10 @@
     right: 100px;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
+}
+.menu.on{
+    display: block;
 }
 .menu ul{
     position: relative;
@@ -467,7 +472,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
+    left:0;
 }
 .menu ul li{
     margin-bottom: 20px;
@@ -507,10 +512,8 @@
 .menu ul li a{
     display: block;
     padding-left: 20px;
-    color: #000;
-    opacity: 0.2;
+    color: #dcdcdc;
 }
-.main ul li.on a{
+.menu ul li.on a{
     color: #000;
-    opacity: 1;
 }

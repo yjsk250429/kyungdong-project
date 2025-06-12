@@ -1,3 +1,6 @@
+#wrap{
+    min-width: 1600px;
+}
 #wrap,
 #container,
 #content,
@@ -11,12 +14,6 @@
     position: relative;
    
 }
-/* .nav-bg{
-    position: absolute;
-    top: 10px;
-    width: 1740px;
-    height: 90px;
-} */
 
 #header{
     width: 1740px;
@@ -32,6 +29,7 @@
     width: 100%;
     position:fixed;
     left: 0;
+    transform: translateX(0%);
     top: 0;
 }
 #header h1 {
@@ -67,6 +65,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 .bg{
     position: fixed;
@@ -78,6 +77,10 @@
     z-index: 50;
     opacity: 0.6;
     display: none;
+}
+.bg.on{
+    display: block;
+    z-index: 100;
 }
 .sitemap{
     position: fixed;
@@ -91,6 +94,10 @@
     padding-top: 50px;
     padding-left: 50px;
     display: none;
+}
+.sitemap.on {
+    display: block;
+    z-index: 110;
 }
 .sitemap .site-gnb{
     display: flex;
@@ -117,22 +124,51 @@
     padding-left: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid #000;
-    /* color:darkblue; */
+    color:orangered;
 }
 .sitemap .site-gnb li ul{
 
 }
 .sitemap .site-gnb li ul li{
 }
-.sitemap .site-gnb li ul li a{
+.sitemap .site-gnb > li > ul > li > a{
     display: block;
     width: 240px;
     padding-left: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 14px;
+    color: orange;
     border-bottom: 1px solid #dcdcdc;
     /* color:darkblue; */
+}
+.sitemap .site-gnb > li > ul > li:nth-child(3) a{
+    border-bottom: none;
+}
+.sitemap .site-gnb > li > ul > li > ul{
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 20px;
+}
+.sitemap .site-gnb > li > ul > li > ul > li{
+    border-bottom:none;
+    height: 40px;
+    position: relative;
+}
+.sitemap .site-gnb > li > ul > li > ul li a{
+    font-size: 14px;
+    padding:15px 50px 15px 35px;
+    line-height: 40px;
+}
+.sitemap .site-gnb > li > ul > li > ul li a::after{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 1px;
+    background: #000;
+    position:absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .sitemap .close{
     position: absolute;
@@ -168,6 +204,7 @@
 .util p{
     margin-left: 25px;
 }
+.util .all-menu{}
 
 #footer{
     background: #131313;
@@ -189,4 +226,8 @@
     position: fixed;
     right: 10%;
     bottom: 30px;
+    display: none;
+}
+.top.on{
+    display: block;
 }
